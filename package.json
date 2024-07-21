@@ -4,7 +4,8 @@
   "description": "An implementation of git using typescript",
   "main": "index.ts",
   "scripts": {
-    "test": "jest --watch"
+    "test": "jest --watch",
+    "start": "ts-node index.ts"
   },
   "author": "rohithrajasekharan",
   "license": "ISC",
