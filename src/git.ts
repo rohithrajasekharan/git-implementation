@@ -6,11 +6,12 @@ export class Git implements GitI {
     name: string
     branch: BranchI;
     private branches: BranchI[] | null
-    constructor(name: string) {
+    constructor(name?: string) {
         this.branches = [];
         this.name = name || 'default-name';
 
         const branch = new Branch('main', null);
+        this.branch = branch;
         this.add(branch)
     }
 
