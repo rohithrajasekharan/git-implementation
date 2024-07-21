@@ -1,3 +1,4 @@
+import { Add } from "./add";
 import { Branch } from "./branch";
 import { BranchI } from "./interfaces/branch-interface";
 import {GitI} from "./interfaces/git-interface"
@@ -36,5 +37,9 @@ export class Git implements GitI {
         this.add(this.branch)
         console.info(`Created and switched to: ${name}`)
         return this.branch
+    }
+
+    stageFile(path: string): boolean {
+        return new Add().stageFile(path);
     }
 }
